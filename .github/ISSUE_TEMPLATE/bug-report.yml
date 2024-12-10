@@ -9,7 +9,7 @@ body:
     attributes:
       label: Description
       description: "Please describe the bug for us: "
-      placeholder: ex. "`juju status` returns the error `not found`"
+      placeholder: ex. "`juju status` returns the error `not found` YEAH"
     validations:
       required: true
 
