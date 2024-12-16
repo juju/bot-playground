@@ -8,7 +8,7 @@ body:
     id: Description
     attributes:
       label: Description
-      description: "Please describe the bug for us: "
+      description: "Please describe the unexpected behaviour: "
       placeholder: ex. "`juju status` returns the error `not found`"
     validations:
       required: true
@@ -22,14 +22,25 @@ body:
     validations:
       required: true
 
-  - type: input
+  - type: dropdown
     id: Cloud
     attributes:
       label: Cloud
-      description: What cloud are you using?
+      description: Which cloud(s) are you using?
       placeholder: ex. AWS
-    validations:
-      required: false
+      multiple: true
+      options:
+        - AWS
+        - Azure
+        - Equinix
+        - GCP
+        - Kubernetes
+        - LXD
+        - MAAS
+        - Manual
+        - OpenStack
+        - Oracle
+        - vSphere
 
   - type: textarea
     id: Expected-Behaviour
@@ -44,15 +55,15 @@ body:
     id: Reproduction-Steps
     attributes:
       label: "Reproduce / Test"
-      description: "Steps to reproduce the behaviour: "
+      description: "Steps to reproduce the unexpected behaviour: "
       placeholder: ex. "juju bootstrap aws && juju status"
     validations:
-      required: false
+      required: true
 
   - type: textarea
     id: Info-Notes
     attributes:
       label: "Notes & References"
-      description: "Please add relevant notes, other related issues/PRs, anything to help diagnose and solve the issue."
+      description: "Please add anything to help diagnose the issue e.g. controller debug logs, output from kubectl, etc."
     validations:
       required: false

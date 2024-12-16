@@ -14,13 +14,13 @@ body:
       required: true
 
   - type: textarea
-    id: Desired-Solution
+    id: Desired-Behaviour
     attributes:
-      label: Desired solution
-      description: "Describe an acceptable solution: "
+      label: Desired behaviour
+      description: "Describe the desired behaviour: "
       placeholder: ex. "`juju status` could return the current time reported by each machine."
     validations:
-      required: false
+      required: true
 
   - type: textarea
     id: Info-Notes
