@@ -27,7 +27,6 @@ body:
     attributes:
       label: Cloud
       description: Which cloud(s) are you using?
-      placeholder: ex. AWS
       multiple: true
       options:
         - AWS
